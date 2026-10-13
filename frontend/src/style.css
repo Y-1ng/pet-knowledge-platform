@@ -1,0 +1,77 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --app-primary: #6c8c5e;
+  --app-primary-light: #8fbc8f;
+  --app-bg: #f7f8fa;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--app-bg);
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+.van-tabbar {
+  border-top: 1px solid #ebedf0;
+}
+
+.van-nav-bar {
+  background-color: var(--app-primary) !important;
+}
+
+.van-nav-bar__title {
+  color: #fff !important;
+}
+
+.pet-card {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+/* ===== 桌面端全屏适配 ===== */
+@media (min-width: 769px) {
+  .van-nav-bar {
+    height: 48px !important;
+  }
+  .van-nav-bar__title {
+    font-size: 18px !important;
+  }
+  /* 让子页面内容不顶到头 */
+  .app-content {
+    padding: 0;
+  }
+  /* 表单类页面居中，不要太宽 */
+  .login-page,
+  .register-page,
+  .password-page,
+  .pet-edit,
+  .create-post,
+  .ask-question {
+    max-width: 500px !important;
+    margin: 40px auto !important;
+  }
+  /* 聊天页面控制最大宽度 */
+  .chat-page {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+}
